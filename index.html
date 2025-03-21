@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="uicons-regular-straight/css/uicons-regular-straight.css">
+    
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'> 
+        <!-- ^ burahin later ^-->
+    <link rel="stylesheet" href="basta.css">
+
+    <!-- App Shit -->
+    <link rel="manifest" href="/DeeGee_Sample/manifest.json">
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://via.placeholder.com/50" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="">
+                <i class="fi fi-rs-envelope"></i>
+            </a></li>
+            <li><a href="">
+                <i class="fi fi-rs-bell"></i>
+            </a></li>
+            <li><a href="">
+                <i class="fi fi-rs-circle-user"></i>
+            </a></li>
+        </ul>
+    </header>
+
+    <aside id="sidebar">
+        <ul>
+            <li class="piechart_fullstack"><a href="">
+                <i class="fi fi-rs-ship"></i>
+                <span class="icon-label">Shipment</span>
+            </a></li>
+            <li><a href="">
+                <i class="fi fi-rs-truck-container"></i>
+                <span class="icon-label">Trucking</span>
+            </a></li>
+            <li><a href="">
+                <i class="fi fi-rs-calculator-money"></i>
+                <span class="icon-label">Finance</span>
+            </a></li>
+            <li><a href="">
+                <i class="fi fi-rs-chart-histogram"></i>
+                <span class="icon-label">Analytics</span>
+            </a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <div class="container">
+            <h2>Hellow</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper semper dui. Maecenas vel magna magna. Phasellus non elit at elit elementum porttitor. Sed tincidunt, risus quis dictum dapibus, tortor nibh suscipit libero, eget vulputate tortor tellus eleifend neque. Sed imperdiet lacus sit amet orci hendrerit tempus. Donec molestie purus imperdiet sem tempus, et fringilla nunc gravida. Quisque feugiat, purus eget imperdiet imperdiet, sem ligula dapibus felis, et congue sem quam eu nisi. Praesent vel ligula quis elit sodales aliquet vel ac tellus. Vestibulum consectetur, mi sed imperdiet bibendum, augue risus consectetur nisl, vitae aliquam enim ante vel orci. Phasellus quis metus quis sem porta hendrerit. Proin ac magna lorem. In purus nibh, varius nec suscipit eu, dictum consectetur sapien. Proin bibendum at nulla sit amet sagittis. Sed mauris tellus, posuere id magna sit amet, fringilla facilisis dui. Proin id bibendum metus, quis molestie risus. </p>
+        </div>
+        <div class="container">
+            <h2>Hi</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper semper dui. Maecenas vel magna magna. Phasellus non elit at elit elementum porttitor. Sed tincidunt, risus quis dictum dapibus, tortor nibh suscipit libero, eget vulputate tortor tellus eleifend neque. Sed imperdiet lacus sit amet orci hendrerit tempus. Donec molestie purus imperdiet sem tempus, et fringilla nunc gravida. Quisque feugiat, purus eget imperdiet imperdiet, sem ligula dapibus felis, et congue sem quam eu nisi. Praesent vel ligula quis elit sodales aliquet vel ac tellus. Vestibulum consectetur, mi sed imperdiet bibendum, augue risus consectetur nisl, vitae aliquam enim ante vel orci. Phasellus quis metus quis sem porta hendrerit. Proin ac magna lorem. In purus nibh, varius nec suscipit eu, dictum consectetur sapien. Proin bibendum at nulla sit amet sagittis. Sed mauris tellus, posuere id magna sit amet, fringilla facilisis dui. Proin id bibendum metus, quis molestie risus.
+               <br>
+               Vestibulum sit amet felis vel ligula pharetra pretium nec vitae ex. Etiam nisl tellus, tristique eget sem eget, ultricies convallis massa. Suspendisse eu eros risus. Nulla vehicula maximus tempor. Phasellus non elementum augue. Donec faucibus ultrices leo quis consequat. Morbi tincidunt ut leo at consectetur. Quisque nec velit ullamcorper lorem scelerisque varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin non ante vulputate, vulputate neque vitae, aliquet mauris. Vivamus sit amet sem ac ipsum ultrices interdum. Aliquam fermentum nisl velit, quis euismod turpis iaculis tempor. Sed non erat quis purus pretium luctus id non libero. </p>
+        </div>
+        <div class="container">
+            <h2>Hey</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper semper dui. Maecenas vel magna magna. Phasellus non elit at elit elementum porttitor. Sed tincidunt, risus quis dictum dapibus, tortor nibh suscipit libero, eget vulputate tortor tellus eleifend neque. Sed imperdiet lacus sit amet orci hendrerit tempus. Donec molestie purus imperdiet sem tempus, et fringilla nunc gravida. Quisque feugiat, purus eget imperdiet imperdiet, sem ligula dapibus felis, et congue sem quam eu nisi. Praesent vel ligula quis elit sodales aliquet vel ac tellus. Vestibulum consectetur, mi sed imperdiet bibendum, augue risus consectetur nisl, vitae aliquam enim ante vel orci. Phasellus quis metus quis sem porta hendrerit. Proin ac magna lorem. In purus nibh, varius nec suscipit eu, dictum consectetur sapien. Proin bibendum at nulla sit amet sagittis. Sed mauris tellus, posuere id magna sit amet, fringilla facilisis dui. Proin id bibendum metus, quis molestie risus. </p>
+        </div>
+    </main>
+    <script>
+        // Register Service Worker 
+        if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("/BT602_Schedule/service-worker.js")
+                    .then(() => console.log("Service Worker Registered", reg))
+                    .catch((error) => console.log("Service Worker Registration Failed", error));
+            }
+    </script>
+</body>
+</html>

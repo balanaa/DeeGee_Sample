@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border-Only Pie Chart</title>
+    <style>
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .pie-chart {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: conic-gradient(
+                blue 0% var(--completed), 
+                orange var(--completed) var(--total)
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pie-chart::before {
+            content: "";
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        /* Total */
+        .pie-chart span {
+            position: absolute;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chart-container">
+        <div class="pie-chart">
+            <span id="total-transactions"></span>
+        </div>
+        <div class="input-box">
+            <input type="number" id="completed" placeholder="Completed Transactions">
+            <input type="number" id="ongoing" placeholder="Ongoing Transactions">
+            <button onclick="updateChart()">Update Chart</button>
+        </div>
+    </div>
+
+    <script>
+        // sample db
+        const transactions = { completed: 87, ongoing: 13 };
+
+        function updateChart() {
+
+            let completedInput = document.getElementById("completed").value;
+            let ongoingInput = document.getElementById("ongoing").value;
+
+            let completed = Number(completedInput);
+            let ongoing = Number(ongoingInput);
+
+            if (isNaN(completed) || isNaN(ongoing) || completed < 0 || ongoing < 0) {
+                alert("Ayusin mo naman");
+                return;
+            }
+
+            transactions.completed = completed;
+            transactions.ongoing = ongoing;
+
+            let total = completed + ongoing;
+            let completedPercentage = (completed / total) * 100;
+            let ongoingPercentage = (ongoing / total) * 100;
+
+            document.documentElement.style.setProperty('--completed', `${completedPercentage}%`);
+            document.documentElement.style.setProperty('--total', `100%`);
+
+            document.getElementById("total-transactions").textContent = total;
+        }
+
+        document.getElementById("completed").value = transactions.completed;
+        document.getElementById("ongoing").value = transactions.ongoing;
+
+        updateChart();
+    </script>
+
+</body>
+</html>
